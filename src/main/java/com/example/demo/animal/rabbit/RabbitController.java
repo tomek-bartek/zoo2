@@ -10,12 +10,14 @@ import java.util.List;
 public class RabbitController {
     @Autowired
     private RabbitService rabbitService;
+
     @GetMapping(path = "getRabbits")
-    public List<Rabbit> getRabbit(){
+    public List<Rabbit> getRabbit() {
         return rabbitService.getRabbit();
     }
+
     @PostMapping(path = "addRabbit")
-    public void addRabbit(@RequestBody Rabbit rabbit){
+    public void addRabbit(@RequestBody Rabbit rabbit) {
         rabbitService.addRabbit(rabbit);
     }
 }

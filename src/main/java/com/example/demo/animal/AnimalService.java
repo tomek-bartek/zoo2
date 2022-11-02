@@ -10,8 +10,9 @@ import java.util.List;
 public class AnimalService {
     @Autowired
     private AnimalRepository animalRepository;
+
     public List<Animal> getAnimal() {
-       return animalRepository.findAll();
+        return animalRepository.findAll();
     }
 
     public List<Animal> getAnimalsByName(String name) {

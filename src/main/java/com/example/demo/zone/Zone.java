@@ -15,7 +15,7 @@ public class Zone {
     private String name;
 
     @OneToMany
-    @JoinColumn(name ="zone_id")
+    @JoinColumn(name = "zone_id")
     private List<Animal> animals;
 
     public Zone(String name) {

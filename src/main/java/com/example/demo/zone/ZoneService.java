@@ -10,6 +10,7 @@ import java.util.Optional;
 public class ZoneService {
     @Autowired
     private ZoneRepository zoneRepository;
+
     public List<Zone> getZone(ZoneService zoneService) {
         return zoneRepository.findAll();
     }
@@ -19,6 +20,6 @@ public class ZoneService {
     }
 
     public Optional<Zone> findZoneById(Long id) {
-       return zoneRepository.findById(id);
+        return zoneRepository.findById(id);
     }
 }

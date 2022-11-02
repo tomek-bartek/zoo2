@@ -10,12 +10,14 @@ import java.util.List;
 public class ElephantController {
     @Autowired
     private ElephantService elephantService;
+
     @GetMapping(path = "getElephants")
-    public List<Elephant> getElephant(){
+    public List<Elephant> getElephant() {
         return elephantService.getElephant();
     }
+
     @PostMapping(path = "addElephant")
-    public void addElephant(@RequestBody Elephant elephant){
+    public void addElephant(@RequestBody Elephant elephant) {
         elephantService.addElephant(elephant);
     }
 }

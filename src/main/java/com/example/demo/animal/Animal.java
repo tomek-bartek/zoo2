@@ -27,9 +27,8 @@ public abstract class Animal {
 
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name="zone_id", insertable = false, updatable = false)
+    @JoinColumn(name = "zone_id", insertable = false, updatable = false)
     private Zone zone;
-
 
 
     public Zone getZone() {
@@ -39,7 +38,6 @@ public abstract class Animal {
     public void setZone(Zone zone) {
         this.zone = zone;
     }
-
 
 
     public Long getId() {

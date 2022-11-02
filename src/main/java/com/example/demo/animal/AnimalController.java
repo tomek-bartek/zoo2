@@ -17,15 +17,16 @@ public class AnimalController {
 
 
     @GetMapping("/animals/")
-    public List<Animal> getAnimal(AnimalRepository animalRepository){
+    public List<Animal> getAnimal(AnimalRepository animalRepository) {
         return animalService.getAnimal();
     }
 
     @GetMapping("/animals/getAnimalByName")
-    public List<Animal> getAnimalsByName(@RequestParam String name){
+    public List<Animal> getAnimalsByName(@RequestParam String name) {
         return animalService.getAnimalsByName(name);
     }
 
+    //Lista stref z największym zapotrzebowaniem na karmę
     @GetMapping("/reports/first")
     public List<Integer> getFirstReport() {
         return animalService.getFirstReport();

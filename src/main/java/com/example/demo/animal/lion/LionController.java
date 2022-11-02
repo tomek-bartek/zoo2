@@ -6,16 +6,18 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path="/lions/")
+@RequestMapping(path = "/lions/")
 public class LionController {
     @Autowired
     private LionService lionService;
+
     @GetMapping(path = "getLions")
-    public List<Lion> getLion(){
+    public List<Lion> getLion() {
         return lionService.getLion();
     }
+
     @PostMapping(path = "addLion")
-    public void addLion(@RequestBody Lion lion){
+    public void addLion(@RequestBody Lion lion) {
         lionService.addLion(lion);
     }
 }
