@@ -14,7 +14,7 @@ public class RabbitController {
     public List<Rabbit> getRabbit(){
         return rabbitService.getRabbit();
     }
-    @PostMapping(path = "addRabbits")
+    @PostMapping(path = "addRabbit")
     public void addRabbit(@RequestBody Rabbit rabbit){
         rabbitService.addRabbit(rabbit);
     }
